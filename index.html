@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پیامکینو | بازاریابی پیامکی هوشمند</title>
+  <meta name="description" content="ارسال پیامک انبوه، تولید متن با هوش مصنوعی و API پایدار در یک پنل ساده." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="پیامکینو">
+        <span class="brand-mark">✳</span>
+        پیامکینو
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">امکانات</a>
+        <a href="#pricing">تعرفه‌ها</a>
+        <a href="#api">API</a>
+        <a href="#faq">سؤالات متداول</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="login" href="login.html?mode=login">ورود</a>
+        <a class="btn btn-primary btn-small" href="login.html?mode=signup">ثبت‌نام رایگان</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">✦ دستیار هوشمند پیامک</span>
+            <h1>پیامک‌هایت را با <span>هوش مصنوعی</span> قدرتمند کن</h1>
+            <p>ارسال پیامک انبوه، تولید متن با AI و API پایدار؛ همه در یک پنل ساده برای کسب‌وکارهای مدرن.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="login.html?mode=signup">شروع رایگان ←</a>
+              <a class="btn btn-outline" href="#contact">صحبت با فروش</a>
+            </div>
+            <div class="hero-note">بدون نیاز به دانش فنی · شروع در چند دقیقه</div>
+          </div>
+
+          <div class="hero-visual" aria-label="پیش‌نمایش پنل ارسال پیامک">
+            <div class="float-card float-delivery">
+              <strong>۹۸٪</strong>
+              نرخ تحویل پیامک
+            </div>
+            <div class="float-card float-ai">
+              <b>✦ پیشنهاد هوش مصنوعی</b>
+              <div>متن پیامکت را سریع‌تر بنویس</div>
+            </div>
+            <div class="float-card float-chart">
+              <strong>+۲۴٪</strong>
+              رشد تعامل
+              <div class="sparkline"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="dashboard">
+              <div class="dash-top">
+                <div class="dash-brand"><span class="dash-icon">✉</span> پنل پیامکینو</div>
+                <span class="dash-avatar"></span>
+              </div>
+              <div class="dash-title">ساخت کمپین جدید</div>
+              <div class="dash-label">عنوان کمپین</div>
+              <div class="fake-input">پیشنهاد ویژه برای مشتریان</div>
+              <div class="dash-label">متن پیامک</div>
+              <div class="message-preview">سلام! برای خرید بعدی شما یک پیشنهاد ویژه داریم. همین امروز استفاده کنید ✨</div>
+              <div class="dash-stats">
+                <div class="mini-stat"><strong>۱٬۲۵۰</strong><span>مخاطب انتخاب‌شده</span></div>
+                <div class="mini-stat"><strong>۲</strong><span>تعداد پارت پیامک</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="customer-row">
+          <p>کسب‌وکارهای پیشرو برای ارتباط بهتر با مشتریانشان از ما استفاده می‌کنند</p>
+          <div class="logos">
+            <span>آویژه</span><span>نارنجی</span><span>مدرسه‌نو</span><span>کافه‌روز</span><span>بازارک</span><span>راهکاران</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card"><strong>+۱۲M</strong><span>پیامک ارسال‌شده در ماه <small>نمونه</small></span></div>
+          <div class="stat-card"><strong>۹۸٪</strong><span>میانگین نرخ تحویل <small>نمونه</small></span></div>
+          <div class="stat-card"><strong>۹۹.۹٪</strong><span>آپتایم سرویس <small>نمونه</small></span></div>
+          <div class="stat-card"><strong>۲۴/۷</strong><span>پشتیبانی کسب‌وکارها</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ai-box">
+          <div>
+            <span class="eyebrow">✦ دستیار هوش مصنوعی</span>
+            <h2>متن پیامکت را در چند ثانیه آماده کن</h2>
+            <p>هدف کمپین را بنویس و یک پیشنهاد متنی آماده بگیر. متن را می‌توانی قبل از ارسال ویرایش کنی.</p>
+          </div>
+          <div class="ai-demo">
+            <label for="aiPrompt">هدف پیامک را بنویس</label>
+            <input id="aiPrompt" value="تخفیف ویژه برای مشتریان وفادار" />
+            <button class="btn" id="generateText">✦ تولید متن پیشنهادی</button>
+            <div class="ai-result" id="aiResult">
+              سلام دوست عزیز! برای قدردانی از همراهی‌ات، تخفیف ویژه‌ای برای خرید بعدی‌ات در نظر گرفتیم. همین امروز از پیشنهادت استفاده کن 💙
+              <div class="ai-meta"><span id="charCount">— کاراکتر</span><span id="partCount">— پارت پیامک</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">امکانات پلتفرم</span>
+          <h2>همه ابزارهای ارتباط با مشتری، یک‌جا</h2>
+          <p>از ساخت کمپین تا بررسی گزارش ارسال، ساده و قابل مدیریت.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-icon">✉</div><h3>ارسال پیامک انبوه</h3><p>پیام خود را برای مخاطبان دلخواه، سریع و آسان ارسال کن.</p></article>
+          <article class="feature-card"><div class="feature-icon">◷</div><h3>ارسال زمان‌بندی‌شده</h3><p>کمپین‌ها را برای زمان مناسب برنامه‌ریزی و خودکار ارسال کن.</p></article>
+          <article class="feature-card"><div class="feature-icon">⌁</div><h3>خطوط اختصاصی</h3><p>با خطوط متناسب با نیاز کسب‌وکارت پیامک بفرست.</p></article>
+          <article class="feature-card"><div class="feature-icon">▤</div><h3>قالب‌های آماده</h3><p>برای شروع سریع‌تر از قالب‌های قابل ویرایش استفاده کن.</p></article>
+          <article class="feature-card"><div class="feature-icon">⌁</div><h3>گزارش لحظه‌ای</h3><p>وضعیت ارسال و تحویل پیامک‌ها را در پنل بررسی کن.</p></article>
+          <article class="feature-card"><div class="feature-icon">◎</div><h3>مدیریت مخاطبین</h3><p>مخاطبان را دسته‌بندی کن و پیام هدفمندتری بفرست.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">شروع آسان</span>
+          <h2>از ایده تا ارسال، فقط چهار قدم</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">۱</div><h3>ثبت‌نام کن</h3><p>حساب کاربری‌ات را در چند دقیقه بساز.</p></article>
+          <article class="step"><div class="step-number">۲</div><h3>حساب را شارژ کن</h3><p>متناسب با نیازت اعتبار ارسال تهیه کن.</p></article>
+          <article class="step"><div class="step-number">۳</div><h3>متنت را آماده کن</h3><p>خودت بنویس یا از دستیار AI کمک بگیر.</p></article>
+          <article class="step"><div class="step-number">۴</div><h3>ارسال و بررسی کن</h3><p>پیامک بفرست و گزارش کمپین را ببین.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container showcase">
+        <div>
+          <span class="eyebrow">پنل ساده و کاربردی</span>
+          <h2>عملکرد کمپین‌ها را واضح ببین</h2>
+          <p>داشبورد یکپارچه، آمار ارسال و وضعیت کمپین‌ها را در یک نگاه در اختیارت می‌گذارد.</p>
+          <a class="btn btn-outline" href="login.html?mode=signup">آشنایی با پنل</a>
+        </div>
+        <div class="showcase-screen">
+          <div class="screen-bar"><span>گزارش کمپین‌ها</span><span>۳۰ روز اخیر ⌄</span></div>
+          <div class="screen-content">
+            <div class="screen-tile"><span>پیامک ارسال‌شده</span><strong>۲۴٬۸۶۰</strong></div>
+            <div class="screen-tile"><span>نرخ تحویل</span><strong>۹۸.۲٪</strong></div>
+            <div class="screen-tile screen-tile-wide"><span>عملکرد ارسال</span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">برای هر نوع کسب‌وکار</span>
+          <h2>ارتباطی بهتر با مشتریانت بساز</h2>
+        </div>
+        <div class="use-grid">
+          <article class="use-card"><div class="feature-icon">▣</div><h3>فروشگاه‌ها</h3><p>اطلاع‌رسانی تخفیف‌ها و پیشنهادهای ویژه به مشتریان.</p></article>
+          <article class="use-card"><div class="feature-icon">☕</div><h3>رستوران و کافه</h3><p>ارسال منوی روز، پیشنهادهای تازه و پیام‌های وفاداری.</p></article>
+          <article class="use-card"><div class="feature-icon">▤</div><h3>آموزشگاه‌ها</h3><p>یادآوری کلاس‌ها، اطلاع‌رسانی ثبت‌نام و اخبار آموزشی.</p></article>
+          <article class="use-card"><div class="feature-icon">⌂</div><h3>سازمان‌ها</h3><p>ارسال اطلاعیه‌های مهم به گروه‌های مخاطبان.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="api">
+      <div class="container">
+        <div class="api-box">
+          <div>
+            <span class="eyebrow">برای توسعه‌دهندگان</span>
+            <h2>یک API ساده برای ارسال پیامک</h2>
+            <p>سرویس پیامک را به محصولت وصل کن و ارسال پیام را در جریان کاری خودکار کن.</p>
+            <a class="btn" href="#contact">مشاهده مستندات API ←</a>
+          </div>
+          <div class="code-card">
+            <div class="code-head">
+              <div class="code-tabs">
+                <button class="code-tab active" data-code="curl">cURL</button>
+                <button class="code-tab" data-code="python">Python</button>
+                <button class="code-tab" data-code="node">Node.js</button>
+              </div>
+              <button class="copy-btn" id="copyCode">کپی کد</button>
+              این بخش را از همان‌جایی که کد قبلی قطع شد، یعنی بعد از دکمه‌ی «کپی کد»، اضافه کن:
+
+```html
+            </div>
+            <pre id="codeBlock">curl -X POST https://api.example.com/v1/messages \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "09120000000",
+    "message": "سلام! پیام شما آماده ارسال است."
+  }'</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">تعرفه‌ها</span>
+          <h2>پلنی متناسب با نیازت انتخاب کن</h2>
+          <p>قیمت‌ها و جزئیات این بخش نمونه‌اند و باید با اطلاعات تأییدشده محصول جایگزین شوند.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p>برای شروع و کسب‌وکارهای کوچک</p>
+            <div class="price">اقتصادی <small>متناسب با مصرف</small></div>
+            <ul>
+              <li>ارسال پیامک انبوه</li>
+              <li>گزارش وضعیت ارسال</li>
+              <li>قالب‌های آماده پیامک</li>
+            </ul>
+            <a class="btn btn-outline" href="login.html?mode=signup">انتخاب پلن</a>
+          </article>
+
+          <article class="price-card popular">
+            <span class="popular-tag">محبوب‌ترین</span>
+            <h3>Professional</h3>
+            <p>برای تیم‌های بازاریابی در حال رشد</p>
+            <div class="price">حرفه‌ای <small>متناسب با مصرف</small></div>
+            <ul>
+              <li>همه امکانات پلن Starter</li>
+              <li>دستیار هوش مصنوعی</li>
+              <li>زمان‌بندی و گزارش‌های پیشرفته</li>
+              <li>مدیریت گروه‌های مخاطبین</li>
+            </ul>
+            <a class="btn btn-primary" href="login.html?mode=signup">شروع رایگان</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Enterprise</h3>
+            <p>برای سازمان‌ها و حجم ارسال بالا</p>
+            <div class="price">سفارشی <small>با مشاوره فروش</small></div>
+            <ul>
+              <li>امکانات متناسب با سازمان شما</li>
+              <li>API و پشتیبانی اختصاصی</li>
+              <li>راهکارهای ارسال سازمانی</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">تماس با فروش</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">تجربه مشتریان</span>
+          <h2>کسب‌وکارها چه می‌گویند؟</h2>
+          <p>این متن‌ها نمونه هستند؛ نظرات واقعی را فقط با رضایت مشتری منتشر کن.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <p>«ساخت و ارسال کمپین‌ها برای تیم ما خیلی ساده‌تر شده و گزارش‌ها را سریع می‌بینیم.»</p>
+            <h3 class="testimonial-author">سارا محمدی</h3>
+            <p>مدیر بازاریابی — نمونه شرکت</p>
+          </article>
+          <article class="feature-card">
+            <p>«راه‌اندازی ارسال پیامک برای اطلاع‌رسانی مشتریان، بدون پیچیدگی انجام شد.»</p>
+            <h3 class="testimonial-author">علی رضایی</h3>
+            <p>مدیر فروشگاه — نمونه کسب‌وکار</p>
+          </article>
+          <article class="feature-card">
+            <p>«مستندات API مسیر اتصال سرویس به محصول ما را روشن‌تر کرد.»</p>
+            <h3 class="testimonial-author">مریم کریمی</h3>
+            <p>توسعه‌دهنده — نمونه سازمان</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">سؤالات متداول</span>
+          <h2>پاسخ پرسش‌های رایج</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">هزینه ارسال پیامک چطور محاسبه می‌شود؟ <span>＋</span></button>
+            <div class="faq-answer">هزینه نهایی به تعرفه‌های تأییدشده سرویس، نوع خط و تعداد پیامک بستگی دارد. اینجا اطلاعات واقعی قیمت‌گذاری را قرار دهید.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">برای استفاده به خط اختصاصی نیاز دارم؟ <span>＋</span></button>
+            <div class="faq-answer">نوع خط مناسب به کاربرد و نیاز کسب‌وکار شما بستگی دارد. جزئیات خطوط فعال را در پنل یا مستندات محصول اعلام کنید.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">نرخ تحویل پیامک چقدر است؟ <span>＋</span></button>
+            <div class="faq-answer">نرخ تحویل ممکن است با توجه به اپراتور، وضعیت شماره مقصد و شرایط ارسال تغییر کند. آمار این صفحه باید با داده واقعی به‌روزرسانی شود.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">آیا امکان تولید متن با هوش مصنوعی وجود دارد؟ <span>＋</span></button>
+            <div class="faq-answer">این صفحه یک نمونه نمایشی از دستیار متن است. برای تولید واقعی متن، باید سرویس هوش مصنوعی به بک‌اند متصل شود.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">چطور از API استفاده کنم؟ <span>＋</span></button>
+            <div class="faq-answer">برای اتصال واقعی، مستندات API، آدرس‌های معتبر و روش دریافت کلید API را از تیم فنی محصول وارد این بخش کنید.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">چطور با پشتیبانی تماس بگیرم؟ <span>＋</span></button>
+            <div class="faq-answer">اطلاعات تماس و ساعات پاسخ‌گویی را اینجا قرار دهید تا کاربران راه ارتباطی مشخصی داشته باشند.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="signup">
+      <div class="container">
+        <div class="final-cta">
+          <h2>برای شروع ارتباط بهتر آماده‌ای؟</h2>
+          <p>حساب کاربری بساز و اولین کمپین پیامکی‌ات را راه‌اندازی کن.</p>
+          <a class="btn btn-primary" href="login.html?mode=signup">ثبت‌نام رایگان</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#"><span class="brand-mark">✳</span> پیامکینو</a>
+          <p>ابزار ساده‌ای برای ارتباط بهتر کسب‌وکارها با مشتریان.</p>
+        </div>
+        <div>
+          <h4>محصول</h4>
+          <a href="#features">امکانات</a>
+          <a href="#pricing">تعرفه‌ها</a>
+          <a href="#api">API</a>
+        </div>
+        <div>
+          <h4>منابع</h4>
+          <a href="#faq">سؤالات متداول</a>
+          <a href="#api">مستندات</a>
+          <a href="#contact">راهنمای شروع</a>
+        </div>
+        <div>
+          <h4>ارتباط با ما</h4>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="tel:+982100000000">۰۲۱-۰۰۰۰۰۰۰۰</a>
+          <a href="#">شبکه‌های اجتماعی</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© تمامی حقوق برای پیامکینو محفوظ است.</span>
+        <span><a href="#">قوانین استفاده</a> · <a href="#">حریم خصوصی</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/script.js" defer></script>
+</body>
+</html>

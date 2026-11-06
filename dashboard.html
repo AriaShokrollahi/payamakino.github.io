@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد پیامکینو</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/dashboard.css" />
+</head>
+
+<body>
+<div class="app">
+  <div class="mobile-overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-mark">پ</span><span>پیامک<span>ینو</span></span></div>
+    <div class="workspace">
+      <div class="workspace-icon">آ</div>
+      <div><strong>آکادمی آفتاب</strong><small>پلن حرفه‌ای</small></div>
+    </div>
+
+    <div class="nav-label">منوی اصلی</div>
+    <nav class="nav" id="mainNav">
+      <button class="active" data-page="dashboard"><span class="nav-icon">▦</span>داشبورد</button>
+      <button data-page="campaigns"><span class="nav-icon">◉</span>کمپین‌ها</button>
+      <button data-page="contacts"><span class="nav-icon">♙</span>مخاطبین</button>
+      <button data-page="reports"><span class="nav-icon">▥</span>گزارش‌ها</button>
+      <button data-page="templates"><span class="nav-icon">▤</span>قالب‌ها</button>
+      <button data-page="ai"><span class="nav-icon">✦</span>دستیار هوشمند</button>
+      <div class="nav-spacer"></div>
+      <div class="nav-label">مدیریت</div>
+      <button data-page="api"><span class="nav-icon">⌘</span>وب‌سرویس API</button>
+      <button data-page="numbers"><span class="nav-icon">☏</span>خطوط ارسال</button>
+      <button data-page="billing"><span class="nav-icon">▣</span>مالی و اعتبار</button>
+      <button data-page="settings"><span class="nav-icon">⚙</span>تنظیمات</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="help-card">
+        <strong>به راهنمایی نیاز دارید؟</strong>
+        <p>تیم پشتیبانی پیامکینو همراه شماست.</p>
+        <a href="#" data-toast="در نسخه واقعی به پشتیبانی متصل می‌شوید">گفت‌وگو با پشتیبانی ←</a>
+      </div>
+      <div class="profile-mini">
+        <div class="avatar" data-user-initial>م</div>
+        <div><strong data-user-name>مریم رضایی</strong><small>مدیر حساب</small></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-right">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+        <div class="breadcrumb">پنل کاربری <span>›</span> <strong id="crumb">داشبورد</strong></div>
+      </div>
+      <div class="topbar-left">
+        <a class="btn btn-sm site-return" href="index.html">
+          <svg class="site-return-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M14 5 7 12l7 7M7 12h13" />
+          </svg>
+          <span>بازگشت به سایت</span>
+        </a>
+        <input class="search" id="globalSearch" placeholder="جست‌وجو در پنل..." />
+        <button class="icon-btn notification-btn" id="notificationBtn" aria-label="اعلان‌ها">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+          </svg>
+          <span class="notice-dot"></span>
+        </button>
+        <div class="user-menu">
+          <div class="avatar" data-user-initial>م</div>
+          <div><strong data-user-name>مریم رضایی</strong><small>آکادمی آفتاب</small></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- Dashboard -->
+      <section class="page active" id="page-dashboard">
+        <div class="page-heading">
+          <div><h1>سلام <span id="greetingName">مریم</span>، خوش آمدید 👋</h1><p class="subheading">وضعیت پیامک‌های کسب‌وکارتان را اینجا ببینید.</p></div>
+          <div class="actions">
+            <button class="btn" id="dateBtn">▣ این ماه</button>
+            <button class="btn btn-primary open-campaign">＋ ایجاد کمپین</button>
+          </div>
+        </div>
+
+        <div class="grid stats-grid">
+          <article class="card stat-card">
+            <div class="stat-top"><span class="stat-label">پیامک ارسال‌شده</span><span class="stat-icon">↗</span></div>
+            <div class="stat-value">۲۴,۸۶۰</div><div class="stat-foot"><span class="positive">↑ ۱۲.۸٪</span> نسبت به ماه قبل</div>
+          </article>
+          <article class="card stat-card">
+            <div class="stat-top"><span class="stat-label">نرخ تحویل</span><span class="stat-icon">✓</span></div>
+            <div class="stat-value">۹۸.۴٪</div><div class="stat-foot"><span class="positive">↑ ۲.۴٪</span> نسبت به ماه قبل</div>
+          </article>
+          <article class="card stat-card">
+            <div class="stat-top"><span class="stat-label">مخاطبین فعال</span><span class="stat-icon">♙</span></div>
+            <div class="stat-value">۸,۳۲۰</div><div class="stat-foot"><span class="positive">↑ ۸.۱٪</span> نسبت به ماه قبل</div>
+          </article>
+          <article class="card stat-card">
+            <div class="stat-top"><span class="stat-label">اعتبار باقی‌مانده</span><span class="stat-icon">◈</span></div>
+            <div class="stat-value">۱۲,۴۰۰</div><div class="stat-foot">پیامک <a class="table-link" href="#" data-goto="billing">افزایش اعتبار</a></div>
+          </article>
+        </div>
+
+        <div class="grid dashboard-grid">
+          <article class="card panel">
+            <div class="panel-head">
+              <div><h2>عملکرد ارسال پیامک</h2><p>روند ارسال در بازه‌ی انتخاب‌شده</p></div>
+              <select class="select" id="chartRange"><option>۷ روز اخیر</option><option>۳۰ روز اخیر</option><option>امسال</option></select>
+            </div>
+            <div class="chart-wrap">
+              <svg viewBox="0 0 700 220" preserveAspectRatio="none" role="img" aria-label="نمودار عملکرد پیامک">
+                <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2563eb" stop-opacity=".16"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="#edf1f6" stroke-width="1">
+                  <line x1="25" y1="25" x2="690" y2="25"/><line x1="25" y1="75" x2="690" y2="75"/>
+                  <line x1="25" y1="125" x2="690" y2="125"/><line x1="25" y1="175" x2="690" y2="175"/>
+                </g>
+                <path d="M25 160 C65 150 75 115 120 130 S185 155 220 108 S280 70 320 105 S385 125 420 72 S485 92 520 62 S580 70 620 42 S665 55 690 28 L690 200 L25 200Z" fill="url(#area)"/>
+                <path d="M25 160 C65 150 75 115 120 130 S185 155 220 108 S280 70 320 105 S385 125 420 72 S485 92 520 62 S580 70 620 42 S665 55 690 28" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                <g fill="#fff" stroke="#2563eb" stroke-width="2">
+                  <circle cx="120" cy="130" r="4"/><circle cx="220" cy="108" r="4"/><circle cx="320" cy="105" r="4"/>
+                  <circle cx="420" cy="72" r="4"/><circle cx="520" cy="62" r="4"/><circle cx="620" cy="42" r="4"/>
+                </g>
+              </svg>
+            </div>
+            <div class="chart-labels"><span>۱ مهر</span><span>۵ مهر</span><span>۹ مهر</span><span>۱۳ مهر</span><span>۱۷ مهر</span><span>۲۱ مهر</span><span>۲۵ مهر</span></div>
+          </article>
+
+          <article class="card panel">
+            <div class="panel-head"><div><h2>وضعیت تحویل</h2><p>مجموع ارسال‌های ماه جاری</p></div><button class="icon-btn" aria-label="گزینه‌ها">•••</button></div>
+            <div class="donut-area">
+              <div class="donut"><div class="donut-center"><strong>۹۸.۴٪</strong><span>تحویل موفق</span></div></div>
+              <div class="legend">
+                <div class="legend-item"><i class="dot"></i>تحویل‌شده <strong>۲۴,۴۶۲</strong></div>
+                <div class="legend-item"><i class="dot gray"></i>ناموفق <strong>۳۹۸</strong></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid lower-grid">
+          <article class="card panel">
+            <div class="panel-head"><div><h2>ارسال سریع</h2><p>یک پیامک کوتاه برای مخاطبین خود بفرستید.</p></div></div>
+            <form class="quick-form" id="quickForm">
+              <div class="field"><label for="quickRecipient">گیرنده</label><input id="quickRecipient" placeholder="شماره موبایل یا نام گروه مخاطبین" required></div>
+              <div class="field">
+                <div class="ai-row"><label for="quickMessage">متن پیامک</label><button type="button" class="ai-button" id="suggestBtn">✦ پیشنهاد متن با هوش مصنوعی</button></div>
+                <textarea id="quickMessage" placeholder="متن پیام خود را وارد کنید..." required></textarea>
+                <div class="field-hint"><span id="charCount">۰</span> کاراکتر · پیامک فارسی با طول متن محاسبه می‌شود.</div>
+              </div>
+              <div><button class="btn btn-primary" type="submit">ارسال پیامک ←</button></div>
+            </form>
+          </article>
+
+          <article class="card panel">
+            <div class="panel-head"><div><h2>فعالیت‌های اخیر</h2><p>آخرین تغییرات حساب کاربری</p></div><a class="table-link" href="#" data-goto="reports">همه فعالیت‌ها</a></div>
+            <div class="activity-list">
+              <div class="activity"><div class="activity-icon">✓</div><div class="activity-text"><strong>کمپین «جشنواره پاییزی» ارسال شد</strong><small>برای ۲,۴۰۰ مخاطب</small></div><span class="activity-time">۱۰ دقیقه پیش</span></div>
+              <div class="activity"><div class="activity-icon blue">＋</div><div class="activity-text"><strong>مخاطبین جدید اضافه شدند</strong><small>فهرست «دانش‌آموزان پایه دهم»</small></div><span class="activity-time">۱ ساعت پیش</span></div>
+              <div class="activity"><div class="activity-icon orange">◈</div><div class="activity-text"><strong>اعتبار حساب افزایش یافت</strong><small>۵,۰۰۰ پیامک</small></div><span class="activity-time">دیروز</span></div>
+              <div class="activity"><div class="activity-icon blue">✦</div><div class="activity-text"><strong>قالب پیام جدید ساخته شد</strong><small>«یادآوری جلسه اولیا»</small></div><span class="activity-time">۲ روز پیش</span></div>
+            </div>
+          </article>
+        </div>
+
+        <article class="card table-card">
+          <div class="panel-head"><div><h2>کمپین‌های اخیر</h2><p>نمای کلی آخرین کمپین‌های پیامکی</p></div><a class="table-link" href="#" data-goto="campaigns">مشاهده همه ←</a></div>
+          <div class="table-scroll"><table>
+            <thead><tr><th>نام کمپین</th><th>تاریخ ارسال</th><th>مخاطبین</th><th>تحویل موفق</th><th>وضعیت</th><th>گزارش</th></tr></thead>
+            <tbody>
+              <tr><td class="campaign-name">جشنواره پاییزی</td><td>۲۵ مهر ۱۴۰۳</td><td>۲,۴۰۰</td><td>۹۸.۶٪</td><td><span class="status done">تکمیل‌شده</span></td><td><a href="#" class="table-link" data-goto="reports">جزئیات</a></td></tr>
+              <tr><td class="campaign-name">یادآوری ثبت‌نام</td><td>۲۶ مهر ۱۴۰۳</td><td>۱,۲۰۰</td><td>۹۷.۲٪</td><td><span class="status sending">در حال ارسال</span></td><td><a href="#" class="table-link" data-goto="reports">جزئیات</a></td></tr>
+              <tr><td class="campaign-name">اطلاع‌رسانی جلسه اولیا</td><td>۲۸ مهر ۱۴۰۳</td><td>۸۵۰</td><td>—</td><td><span class="status scheduled">زمان‌بندی‌شده</span></td><td><a href="#" class="table-link" data-goto="campaigns">جزئیات</a></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+      </section>
+
+      <!-- Campaigns -->
+      <section class="page" id="page-campaigns">
+        <div class="page-heading"><div><h1>کمپین‌ها</h1><p class="subheading">کمپین‌های پیامکی را بسازید و مدیریت کنید.</p></div><div class="actions"><button class="btn">⇩ خروجی گرفتن</button><button class="btn btn-primary open-campaign">＋ ایجاد کمپین</button></div></div>
+        <div class="grid stats-grid">
+          <article class="card stat-card"><div class="stat-label">کل کمپین‌ها</div><div class="stat-value">۴۸</div><div class="stat-foot">در همه‌ی زمان‌ها</div></article>
+          <article class="card stat-card"><div class="stat-label">در حال ارسال</div><div class="stat-value">۲</div><div class="stat-foot">کمپین فعال</div></article>
+          <article class="card stat-card"><div class="stat-label">زمان‌بندی‌شده</div><div class="stat-value">۵</div><div class="stat-foot">برای روزهای آینده</div></article>
+          <article class="card stat-card"><div class="stat-label">میانگین تحویل</div><div class="stat-value">۹۸.۱٪</div><div class="stat-foot"><span class="positive">عملکرد عالی</span></div></article>
+        </div>
+        <article class="card table-card">
+          <div class="panel-head"><div><h2>فهرست کمپین‌ها</h2><p>جزئیات و وضعیت ارسال‌ها</p></div><select class="select"><option>همه وضعیت‌ها</option><option>تکمیل‌شده</option><option>در حال ارسال</option><option>زمان‌بندی‌شده</option></select></div>
+          <div class="table-scroll"><table><thead><tr><th>نام کمپین</th><th>نوع</th><th>تاریخ</th><th>مخاطبین</th><th>وضعیت</th><th>عملیات</th></tr></thead>
+            <tbody>
+              <tr><td class="campaign-name">جشنواره پاییزی</td><td>تبلیغاتی</td><td>۲۵ مهر ۱۴۰۳</td><td>۲,۴۰۰</td><td><span class="status done">تکمیل‌شده</span></td><td><a class="table-link" href="#" data-toast="نمایش گزارش کمپین">گزارش</a></td></tr>
+              <tr><td class="campaign-name">یادآوری ثبت‌نام</td><td>اطلاع‌رسانی</td><td>۲۶ مهر ۱۴۰۳</td><td>۱,۲۰۰</td><td><span class="status sending">در حال ارسال</span></td><td><a class="table-link" href="#" data-toast="نمایش گزارش کمپین">گزارش</a></td></tr>
+              <tr><td class="campaign-name">جلسه اولیا و مربیان</td><td>اطلاع‌رسانی</td><td>۲۸ مهر ۱۴۰۳</td><td>۸۵۰</td><td><span class="status scheduled">زمان‌بندی‌شده</span></td><td><a class="table-link" href="#" data-toast="ویرایش کمپین">ویرایش</a></td></tr>
+              <tr><td class="campaign-name">کد تخفیف مهر</td><td>تبلیغاتی</td><td>۲۰ مهر ۱۴۰۳</td><td>۳,۱۰۰</td><td><span class="status done">تکمیل‌شده</span></td><td><a class="table-link" href="#" data-toast="نمایش گزارش کمپین">گزارش</a></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+      </section>
+
+      <!-- Contacts -->
+      <section class="page" id="page-contacts">
+        <div class="page-heading"><div><h1>مخاطبین</h1><p class="subheading">فهرست‌ها و گروه‌های مخاطبین خود را مدیریت کنید.</p></div><div class="actions"><button class="btn">⇧ ورود از فایل</button><button class="btn btn-primary" data-toast="فرم افزودن مخاطب آماده اتصال به بک‌اند است">＋ افزودن مخاطب</button></div></div>
+        <div class="grid stats-grid">
+          <article class="card stat-card"><div class="stat-label">مجموع مخاطبین</div><div class="stat-value">۸,۳۲۰</div><div class="stat-foot">در ۱۲ گروه</div></article>
+          <article class="card stat-card"><div class="stat-label">مخاطبین فعال</div><div class="stat-value">۸,۰۹۰</div><div class="stat-foot">قابل ارسال</div></article>
+          <article class="card stat-card"><div class="stat-label">افزوده‌شده این ماه</div><div class="stat-value">۶۴۰</div><div class="stat-foot"><span class="positive">↑ ۸.۱٪</span> رشد</div></article>
+          <article class="card stat-card"><div class="stat-label">گروه‌ها</div><div class="stat-value">۱۲</div><div class="stat-foot">فهرست مخاطبین</div></article>
+        </div>
+        <article class="card table-card">
+          <div class="panel-head"><div><h2>گروه‌های مخاطبین</h2><p>مدیریت فهرست‌های ذخیره‌شده</p></div><input class="search dashboard-inline-style-01" placeholder="جست‌وجوی گروه..."></div>
+          <div class="table-scroll"><table><thead><tr><th>نام گروه</th><th>تعداد مخاطب</th><th>ایجاد شده</th><th>آخرین به‌روزرسانی</th><th>وضعیت</th><th>عملیات</th></tr></thead>
+            <tbody>
+              <tr><td class="campaign-name">دانش‌آموزان پایه دهم</td><td>۱,۲۴۰</td><td>۱ مهر ۱۴۰۳</td><td>امروز</td><td><span class="status done">فعال</span></td><td><a class="table-link" href="#" data-toast="نمایش مخاطبین گروه">مشاهده</a></td></tr>
+              <tr><td class="campaign-name">والدین دانش‌آموزان</td><td>۲,۸۵۰</td><td>۲۸ شهریور ۱۴۰۳</td><td>دیروز</td><td><span class="status done">فعال</span></td><td><a class="table-link" href="#" data-toast="نمایش مخاطبین گروه">مشاهده</a></td></tr>
+              <tr><td class="campaign-name">مشتریان فروشگاه</td><td>۳,۴۲۰</td><td>۱۵ شهریور ۱۴۰۳</td><td>۱۸ مهر ۱۴۰۳</td><td><span class="status done">فعال</span></td><td><a class="table-link" href="#" data-toast="نمایش مخاطبین گروه">مشاهده</a></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+      </section>
+
+      <!-- Reports -->
+      <section class="page" id="page-reports">
+        <div class="page-heading"><div><h1>گزارش‌ها</h1><p class="subheading">عملکرد ارسال و تعامل کمپین‌ها را بررسی کنید.</p></div><div class="actions"><select class="select"><option>۳۰ روز اخیر</option><option>۷ روز اخیر</option><option>امسال</option></select><button class="btn">⇩ دانلود گزارش</button></div></div>
+        <div class="grid stats-grid">
+          <article class="card stat-card"><div class="stat-label">کل پیامک‌ها</div><div class="stat-value">۲۴,۸۶۰</div><div class="stat-foot">در بازه‌ی انتخاب‌شده</div></article>
+          <article class="card stat-card"><div class="stat-label">تحویل موفق</div><div class="stat-value">۲۴,۴۶۲</div><div class="stat-foot"><span class="positive">۹۸.۴٪</span> نرخ تحویل</div></article>
+          <article class="card stat-card"><div class="stat-label">ناموفق</div><div class="stat-value">۳۹۸</div><div class="stat-foot">۱.۶٪ از کل ارسال‌ها</div></article>
+          <article class="card stat-card"><div class="stat-label">میانگین کلیک</div><div class="stat-value">۴.۸٪</div><div class="stat-foot"><span class="positive">↑ ۰.۶٪</span> نسبت به قبل</div></article>
+        </div>
+        <div class="grid dashboard-grid dashboard-inline-style-02">
+          <article class="card panel"><div class="panel-head"><div><h2>روند ارسال</h2><p>مقایسه‌ی پیامک‌های ارسال‌شده در طول زمان</p></div></div>
+            <div class="chart-wrap"><svg viewBox="0 0 700 220" preserveAspectRatio="none"><g stroke="#edf1f6"><line x1="20" y1="30" x2="690" y2="30"/><line x1="20" y1="85" x2="690" y2="85"/><line x1="20" y1="140" x2="690" y2="140"/><line x1="20" y1="195" x2="690" y2="195"/></g><path d="M20 160 L110 140 L200 150 L290 85 L380 112 L470 65 L560 78 L690 30" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </article>
+          <article class="card panel"><div class="panel-head"><div><h2>خلاصه عملکرد</h2><p>وضعیت کلی ارسال‌ها</p></div></div><div class="donut-area"><div class="donut"><div class="donut-center"><strong>۹۸.۴٪</strong><span>تحویل موفق</span></div></div><div class="legend"><div class="legend-item"><i class="dot"></i>موفق <strong>۹۸.۴٪</strong></div><div class="legend-item"><i class="dot gray"></i>ناموفق <strong>۱.۶٪</strong></div></div></div></article>
+        </div>
+      </section>
+
+      <!-- Templates -->
+      <section class="page" id="page-templates">
+        <div class="page-heading"><div><h1>قالب‌های پیامک</h1><p class="subheading">قالب‌های آماده را ویرایش کنید یا قالب جدید بسازید.</p></div><button class="btn btn-primary" data-toast="ساخت قالب جدید">＋ ساخت قالب</button></div>
+        <div class="grid section-grid">
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">▤</span><span class="status done">تبلیغاتی</span></div><h3 class="dashboard-inline-style-03">جشنواره و تخفیف</h3><p>مناسب اطلاع‌رسانی پیشنهادهای ویژه و فروش‌های مناسبتی.</p><div class="template-preview">سلام {{نام}} عزیز! تخفیف ویژه‌ی ما شروع شد. همین حالا از پیشنهادهای جدید دیدن کنید: {{لینک}}</div><button class="btn btn-sm dashboard-inline-style-04" data-toast="قالب برای ویرایش انتخاب شد">استفاده از قالب</button></article>
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">▤</span><span class="status sending">اطلاع‌رسانی</span></div><h3 class="dashboard-inline-style-05">یادآوری جلسه</h3><p>یادآوری زمان جلسه، رویداد یا قرار ملاقات برای مخاطبین.</p><div class="template-preview">{{نام}} عزیز، جلسه‌ی شما در تاریخ {{تاریخ}} ساعت {{ساعت}} برگزار می‌شود.</div><button class="btn btn-sm dashboard-inline-style-06" data-toast="قالب برای ویرایش انتخاب شد">استفاده از قالب</button></article>
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">▤</span><span class="status scheduled">خدماتی</span></div><h3 class="dashboard-inline-style-07">تأیید ثبت‌نام</h3><p>ارسال پیام تأیید خودکار پس از ثبت درخواست یا سفارش.</p><div class="template-preview">{{نام}} عزیز، ثبت‌نام شما با موفقیت انجام شد. کد پیگیری: {{کد}}</div><button class="btn btn-sm dashboard-inline-style-08" data-toast="قالب برای ویرایش انتخاب شد">استفاده از قالب</button></article>
+        </div>
+      </section>
+
+      <!-- AI -->
+      <section class="page" id="page-ai">
+        <div class="page-heading"><div><h1>دستیار هوشمند پیامک</h1><p class="subheading">برای کمپین خود، متن پیامک پیشنهاد بگیرید.</p></div></div>
+        <div class="grid dashboard-grid">
+          <article class="card panel">
+            <div class="panel-head"><div><h2>ساخت متن پیامک</h2><p>موضوع و لحن دلخواهتان را بنویسید.</p></div><span class="ai-button">✦ دستیار هوشمند</span></div>
+            <div class="quick-form">
+              <div class="field"><label for="aiTopic">موضوع پیام</label><input id="aiTopic" placeholder="مثلاً تخفیف پایان فصل"></div>
+              <div class="field"><label for="aiTone">لحن پیام</label><select id="aiTone"><option>صمیمی</option><option>رسمی</option><option>هیجان‌انگیز</option></select></div>
+              <button class="btn btn-primary" id="generateBtn">✦ پیشنهاد متن</button>
+              <div class="field"><label for="aiOutput">پیشنهاد متن</label><textarea id="aiOutput" placeholder="متن پیشنهادی اینجا نمایش داده می‌شود..."></textarea></div>
+              <button class="btn" id="copyAi">کپی متن</button>
+            </div>
+          </article>
+          <article class="card panel"><div class="panel-head"><div><h2>راهنمای نوشتن پیامک</h2><p>چند نکته برای ارتباط مؤثرتر</p></div></div>
+            <div class="activity-list">
+              <div class="activity"><div class="activity-icon blue">۱</div><div class="activity-text"><strong>کوتاه و روشن بنویسید</strong><small>پیام اصلی را در ابتدای متن قرار دهید.</small></div></div>
+              <div class="activity"><div class="activity-icon blue">۲</div><div class="activity-text"><strong>دعوت به اقدام داشته باشید</strong><small>به مخاطب بگویید قدم بعدی چیست.</small></div></div>
+              <div class="activity"><div class="activity-icon blue">۳</div><div class="activity-text"><strong>لحن را با مخاطب هماهنگ کنید</strong><small>پیام متناسب با گروه هدف نتیجه‌ی بهتری دارد.</small></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- API -->
+      <section class="page" id="page-api">
+        <div class="page-heading"><div><h1>وب‌سرویس API</h1><p class="subheading">ارسال پیامک را به سرویس یا نرم‌افزار خود متصل کنید.</p></div><button class="btn" data-toast="راهنمای API در نسخه کامل نمایش داده می‌شود">مشاهده مستندات</button></div>
+        <div class="grid section-grid dashboard-inline-style-09">
+          <article class="card panel"><div class="panel-head"><div><h2>کلید دسترسی</h2><p>این کلید را محرمانه نگه دارید.</p></div></div><div class="field"><label>API Key</label><div class="api-key"><input id="apiKey" value="pk_live_••••••••••••••••••••" readonly><button class="btn btn-sm" id="copyKey">کپی</button></div></div><button class="btn btn-sm dashboard-inline-style-10" data-toast="در نسخه واقعی کلید جدید ساخته می‌شود">ساخت کلید جدید</button></article>
+          <article class="card panel"><div class="panel-head"><div><h2>وضعیت سرویس</h2><p>آمار استفاده از API</p></div><span class="status done">فعال</span></div><div class="stat-value">۱,۲۸۰ <small class="dashboard-inline-style-11">درخواست این ماه</small></div><div class="field-hint">سقف پلن: ۱۰,۰۰۰ درخواست ماهانه</div><div class="progress"><span></span></div></article>
+        </div>
+        <article class="card panel dashboard-inline-style-12">
+          <div class="panel-head"><div><h2>نمونه کد ارسال</h2><p>نمونه‌ی ساده‌ی درخواست به API</p></div></div>
+          <div class="code-tabs" id="codeTabs"><button class="active" data-lang="curl">cURL</button><button data-lang="python">Python</button><button data-lang="php">PHP</button><button data-lang="node">Node.js</button></div>
+          <pre class="codebox" id="codeSample">curl -X POST https://api.payamakino.ir/v1/messages \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"to":"09120000000","message":"سلام، پیام آزمایشی"}'</pre>
+        </article>
+      </section>
+
+      <!-- Numbers -->
+      <section class="page" id="page-numbers">
+        <div class="page-heading"><div><h1>خطوط ارسال</h1><p class="subheading">خطوط ارسال پیامک سازمان خود را مدیریت کنید.</p></div><button class="btn btn-primary" data-toast="درخواست افزودن خط ثبت شد">＋ درخواست خط جدید</button></div>
+        <div class="grid section-grid">
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">☏</span><span class="status done">فعال</span></div><div class="stat-value dashboard-inline-style-13">3000***21</div><h3>خط خدماتی</h3><p>قابل استفاده برای پیامک‌های اطلاع‌رسانی.</p></article>
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">☏</span><span class="status done">فعال</span></div><div class="stat-value dashboard-inline-style-14">5000***84</div><h3>خط تبلیغاتی</h3><p>مناسب ارسال کمپین‌های تبلیغاتی.</p></article>
+          <article class="card info-card"><div class="stat-top"><span class="stat-icon">＋</span></div><h3 class="dashboard-inline-style-15">افزودن خط جدید</h3><p>برای انتخاب خط متناسب با نیاز کسب‌وکارتان درخواست ثبت کنید.</p><button class="btn btn-sm dashboard-inline-style-16" data-toast="درخواست افزودن خط ثبت شد">ثبت درخواست</button></article>
+        </div>
+      </section>
+
+      <!-- Billing -->
+      <section class="page" id="page-billing">
+        <div class="page-heading"><div><h1>مالی و اعتبار</h1><p class="subheading">اعتبار، تراکنش‌ها و صورتحساب‌های خود را ببینید.</p></div><button class="btn btn-primary" data-toast="درگاه پرداخت در نسخه واقعی متصل می‌شود">＋ افزایش اعتبار</button></div>
+        <div class="grid stats-grid">
+          <article class="card stat-card"><div class="stat-label">اعتبار پیامکی</div><div class="stat-value">۱۲,۴۰۰</div><div class="stat-foot">پیامک قابل ارسال</div></article>
+          <article class="card stat-card"><div class="stat-label">پلن فعلی</div><div class="stat-value dashboard-inline-style-17">حرفه‌ای</div><div class="stat-foot">تمدید در ۳۰ آبان ۱۴۰۳</div></article>
+          <article class="card stat-card"><div class="stat-label">هزینه این ماه</div><div class="stat-value">۸۴۰,۰۰۰</div><div class="stat-foot">تومان</div></article>
+          <article class="card stat-card"><div class="stat-label">تراکنش‌ها</div><div class="stat-value">۱۲</div><div class="stat-foot">در ۳۰ روز اخیر</div></article>
+        </div>
+        <article class="card table-card"><div class="panel-head"><div><h2>تراکنش‌های اخیر</h2><p>سوابق پرداخت و افزایش اعتبار</p></div></div><div class="table-scroll"><table><thead><tr><th>شرح</th><th>تاریخ</th><th>مبلغ</th><th>روش پرداخت</th><th>وضعیت</th></tr></thead><tbody>
+          <tr><td class="campaign-name">خرید اعتبار پیامکی</td><td>۲۵ مهر ۱۴۰۳</td><td>۵۰۰,۰۰۰ تومان</td><td>درگاه آنلاین</td><td><span class="status done">موفق</span></td></tr>
+          <tr><td class="campaign-name">تمدید پلن حرفه‌ای</td><td>۱ مهر ۱۴۰۳</td><td>۳۴۰,۰۰۰ تومان</td><td>درگاه آنلاین</td><td><span class="status done">موفق</span></td></tr>
+        </tbody></table></div></article>
+      </section>
+
+      <!-- Settings -->
+      <section class="page" id="page-settings">
+        <div class="page-heading"><div><h1>تنظیمات</h1><p class="subheading">اطلاعات حساب و ترجیحات خود را ویرایش کنید.</p></div><button class="btn btn-primary" id="saveSettings">ذخیره تغییرات</button></div>
+        <article class="card panel settings-form">
+          <div class="panel-head"><div><h2>اطلاعات حساب</h2><p>اطلاعات پایه‌ی سازمان و مدیر حساب</p></div></div>
+          <div class="grid">
+            <div class="field"><label>نام و نام خانوادگی</label><input id="accountName" value="مریم رضایی"></div>
+            <div class="field"><label>نام سازمان</label><input value="آکادمی آفتاب"></div>
+            <div class="field"><label>ایمیل</label><input value="maryam@example.com" dir="ltr"></div>
+            <div class="field"><label>شماره موبایل</label><input value="۰۹۱۲۱۲۳۴۵۶۷"></div>
+          </div>
+          <div class="dashboard-inline-style-18"></div>
+          <div class="panel-head"><div><h2>اعلان‌ها</h2><p>انتخاب کنید چه اعلان‌هایی دریافت کنید.</p></div></div>
+          <div class="dashboard-inline-style-19">
+            <div class="dashboard-inline-style-20"><span>گزارش پایان ارسال کمپین</span><button class="toggle on" aria-label="تغییر تنظیم"></button></div>
+            <div class="dashboard-inline-style-21"><span>هشدار کمبود اعتبار</span><button class="toggle on" aria-label="تغییر تنظیم"></button></div>
+            <div class="dashboard-inline-style-22"><span>خبرنامه و پیشنهادهای پیامکینو</span><button class="toggle" aria-label="تغییر تنظیم"></button></div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</div>
+
+<!-- Create campaign modal -->
+<div class="modal-backdrop" id="campaignModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><h2 id="modalTitle">ایجاد کمپین جدید</h2><button class="close-modal" id="closeModal" aria-label="بستن">×</button></div>
+    <form class="quick-form" id="campaignForm">
+      <div class="field"><label for="campaignName">نام کمپین</label><input id="campaignName" placeholder="مثلاً جشنواره پایان فصل" required></div>
+      <div class="field"><label for="campaignGroup">گروه مخاطبین</label><select id="campaignGroup"><option>انتخاب گروه مخاطبین</option><option>دانش‌آموزان پایه دهم</option><option>والدین دانش‌آموزان</option><option>مشتریان فروشگاه</option></select></div>
+      <div class="field"><label for="campaignText">متن پیامک</label><textarea id="campaignText" placeholder="متن پیام کمپین را وارد کنید..." required></textarea></div>
+      <div class="field"><label for="schedule">زمان ارسال</label><select id="schedule"><option>ارسال فوری</option><option>زمان‌بندی برای بعد</option></select></div>
+      <div class="actions dashboard-inline-style-23"><button class="btn btn-primary" type="submit">ساخت کمپین</button><button class="btn" type="button" id="cancelModal">انصراف</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+  <script src="src/js/dashboard.js" defer></script>
+</body>
+</html>
